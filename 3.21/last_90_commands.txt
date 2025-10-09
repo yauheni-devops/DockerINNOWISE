@@ -1,0 +1,90 @@
+ 1936  sudo wg-quick down wg0
+ 1937  docker build -f Dockerfile.alpine -t zookeeper-alpine:latest .
+ 1938  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1939  sudo wg-quick up wg0
+ 1940  code Dockerfile.buster 
+ 1941  sudo wg-quick down wg0
+ 1942  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1943  sudo wg-quick up wg0
+ 1944  code Dockerfile.buster 
+ 1945  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1946  sudo wg-quick down wg0
+ 1947  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1948  docker images zookeeper-*
+ 1949  docker images --help
+ 1950  sudo wg-quick up wg0
+ 1951  docker images | grep zookeeper
+ 1952  history 20 > last 40_commands.txt
+ 1953  history 20 > last_40_commands.txt
+ 1954  history 40 > last_40_commands.txt
+ 1955  history 90 > last_90_commands.txt
+ 1956  docker ps
+ 1957  # Пример использования имени и ID
+ 1958  docker stop a000330316d2
+ 1959  docker ps
+ 1960  git status 
+ 1961  git add .
+ 1962  git commit -m "3.20"
+ 1963  git push
+ 1964  git remote -v
+ 1965  git remote set-url origin https://github.com/yauheni-devops/zookeeper.git
+ 1966  git push
+ 1967  git push origin master
+ 1968  git status 
+ 1969  cd ..
+ 1970  git status 
+ 1971  git commit -m "3.20"
+ 1972  git add .
+ 1973  git commit -m "3.20"
+ 1974  git push
+ 1975  mkdir 3.21
+ 1976  cd 3.21
+ 1977  pwd
+ 1978  # Политика "no" (не перезапускать)
+ 1979  docker run -d --name inno-dkr-23-no --restart no nginx:stable-alpine
+ 1980  # Политика "on-failure" (перезапускать только при ошибке)
+ 1981  docker run -d --name inno-dkr-23-on-failure --restart on-failure nginx:stable-alpine
+ 1982  # Политика "unless-stopped" (перезапускать всегда, кроме случая, когда остановлен вручную)
+ 1983  docker run -d --name inno-dkr-23-unless-stopped --restart unless-stopped nginx:stable-alpine
+ 1984  # Политика "always" (перезапускать всегда)
+ 1985  docker run -d --name inno-dkr-23-always --restart always nginx:stable-alpine
+ 1986  docker kill -s 15 inno-dkr-23-no
+ 1987  docker kill -s 15 inno-dkr-23-on-failure
+ 1988  docker kill -s 15 inno-dkr-23-unless-stopped
+ 1989  docker kill -s 15 inno-dkr-23-always
+ 1990  docker ps -a | tee /home/user/kill_15.txt
+ 1991  ls -la
+ 1992  docker start inno-dkr-23-no
+ 1993  docker start inno-dkr-23-on-failure
+ 1994  docker ps -a
+ 1995  docker kill inno-dkr-23-no
+ 1996  docker kill inno-dkr-23-on-failure
+ 1997  docker kill inno-dkr-23-unless-stopped
+ 1998  docker kill inno-dkr-23-always
+ 1999  docker ps -a | tee /home/user/kill.txt
+ 2000  code /home/user/kill.txt
+ 2001  docker ps -a | tee /home/user/kill.txt
+ 2002  touch /home/user/kill.txt
+ 2003  touch home/user/kill.txt
+ 2004  cd /home
+ 2005  ls -la
+ 2006  docker ps -a | tee /home/localadmin/kill.txt
+ 2007  cd localadmin/
+ 2008  cd DockerINNOWISE/
+ 2009  cd 3.21
+ 2010  docker ps -a | tee /home/localadmin/kill.txt
+ 2011  docker ps -a 
+ 2012  watch docker ps -a
+ 2013  [200~docker logs inno-dkr-23-always~
+ 2014  docker logs inno-dkr-23-always
+ 2015  sudo journalctl -u docker.service --since "30 minutes ago"
+ 2016  docker --version
+ 2017  git status 
+ 2018  git add .
+ 2019  git status 
+ 2020  cd ..
+ 2021  git status 
+ 2022  git add .
+ 2023  cd 3.21
+ 2024  cd DockerINNOWISE/
+ 2025  cd 3.21
