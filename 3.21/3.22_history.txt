@@ -1,0 +1,1000 @@
+  983  Используя команду docker images сравни размеры итоговых образов
+  984  docker ps -a -q
+  985  docker ps
+  986  docker ps -a
+  987  docker stop inno-dkr-10
+  988  docker ps -a
+  989  profile-sync-daemon
+  990  sudo systemctl list-unit-files --state=enabled
+  991  sudo apt-get remove telegram
+  992  sudo sysctl vm.swappiness=10
+  993  code /etc/sysctl.conf.
+  994  code /etc/sysctl.conf
+  995  sudo apt autoremove &
+  996  sudo apt clean
+  997  v sudo apt remove firefox
+  998  apt-get remove telegram-desktop -y
+  999  sudo apt-get remove telegram-desktop -y
+ 1000  sudo apt autoremove
+ 1001  yum list installed
+ 1002  dpkg -l
+ 1003  sudo apt remove firefox
+ 1004  dpkg -l | grep telegram
+ 1005  dpkg -l | grep t
+ 1006  dpkg -l | grep tel
+ 1007  dpkg -l | grep tg
+ 1008  docker pull nginx:stable-alpine
+ 1009  docker tag nginx:stable-alpine inno-dkr-12
+ 1010  docker images
+ 1011  docker tag nginx:stable-alpine inno-dkr-12
+ 1012  docker ps
+ 1013  docker tag nginx:stable-alpine inno-dkr-12
+ 1014  docker pull nginx:stable-alpine
+ 1015  docker rmi nginx:stable-alpine
+ 1016  docker images
+ 1017  docker pull nginx:stable-alpine
+ 1018  docker images | tee /home/user/images.txt
+ 1019  docker rmi $(docker images -q --filter "reference=nginx") inno-dkr-12
+ 1020  docker rmi $(docker images -q --filter "reference=nginx") inno-dkr-09
+ 1021  docker images
+ 1022  docker rmi $(docker images -q --filter "reference=nginx")
+ 1023  docker container prune
+ 1024  docker rmi $(docker images -q --filter "reference=nginx") inno-dkr-12
+ 1025  docker container prune
+ 1026  docker images
+ 1027  docker rmi $(docker images | grep -E "nginx|inno-dkr-12" | awk '{print $1":"$2}')
+ 1028  docker rmi $(docker images | grep -E "nginx" | awk '{print $1":"$2}')
+ 1029  docker images
+ 1030  docker rmi --force nginx:stable-alpine
+ 1031  docker restart inno-dkr-12
+ 1032  docker ps
+ 1033  docker pull nginx:stable-alpine
+ 1034  docker tag nginx:stable-alpine inno-dkr-12
+ 1035  docker images
+ 1036  docker rmi nginx:stable-alpine
+ 1037  docker images
+ 1038  docker pull nginx:stable-alpine
+ 1039  docker images | tee /home/user/images.txt
+ 1040  docker rmi $(docker images -q --filter "reference=nginx") inno-dkr-12
+ 1041  docker images 
+ 1042  docker rmi $(docker images -q --filter "reference=nginx") nginx
+ 1043  docker ps -a
+ 1044  docker ps 
+ 1045  docker rmi $(docker images -q --filter "reference=nginx") inno-dkr-12
+ 1046  docker rmi nginx:stable-alpine
+ 1047  docker rmi $(docker images | grep 'nginx' | awk '{print $1":"$2}')
+ 1048  docker image
+ 1049  docker images
+ 1050  docker run -d --name inno-dkr-12 nginx:stable-alpine
+ 1051  docker rmi nginx:stable-alpine
+ 1052  docker rmi --force nginx:stable-alpine
+ 1053  docker ps
+ 1054  docker ps -a
+ 1055  docker restart inno-dkr-12
+ 1056  docker ps -a
+ 1057  docker ps
+ 1058  docker rmi --force nginx:stable-alpine
+ 1059  docker rmi --force inno-dkr-12
+ 1060  docker ps
+ 1061  docker stop inno-dkr-12
+ 1062  docker ps
+ 1063  docker rmi --force nginx:stable-alpine
+ 1064  docker build -t cache:1 .
+ 1065  ls -la
+ 1066  cd DockerINNOWISE/
+ 1067  ls -la
+ 1068  cd 3.11
+ 1069  ls -la
+ 1070  pwd
+ 1071  cp -r /home/localadmin/DockerINNOWISE/3.11 /home/localadmin/DockerINNOWISE/3.13
+ 1072  cd ..
+ 1073  ls -la
+ 1074  cd 3.13
+ 1075  ls -la
+ 1076  docker build -t cache:1 .
+ 1077  code Dockerfile 
+ 1078  ls -la
+ 1079  code testfile 
+ 1080  docker build -t cache:1 .
+ 1081  cd ..
+ 1082  ls -la
+ 1083  mkdir 3.14
+ 1084  cd 3.14
+ 1085  code 3.14.sh
+ 1086  chmod +x run_all.sh
+ 1087  chmod +x run_3.14.sh
+ 1088  ls -la
+ 1089  chmod +x run_3.14.sh
+ 1090  sudo chmod +x run_3.14.sh
+ 1091  chmod +x 3.14.sh
+ 1092  ./3.14.sh
+ 1093  code 3.14.sh 
+ 1094  ./3.14.sh
+ 1095  code 3.14.sh 
+ 1096  git clone https://github.com/Dmitry-dms/gocalc.git ~/gocalc
+ 1097  git -c credential.helper= clone https://github.com/Dmitry-dms/gocalc.git ~/gocalc
+ 1098  git config --global --unset credential.helper
+ 1099  git clone https://github.com/Dmitry-dms/gocalc.git ~/gocalc
+ 1100  docker build -t cache:1 .
+ 1101  cd DockerINNOWISE/
+ 1102  cd 3.14
+ 1103  ls -la
+ 1104  cd ..
+ 1105  ls -la
+ 1106  cd 3.13
+ 1107  ls -la
+ 1108  docker build -t cache:1 .
+ 1109  docker build -t cache:2 .
+ 1110  cd ..
+ 1111  DockerINNOWISE
+ 1112  git status
+ 1113  git add .
+ 1114  git commit -m "3.13 27.09.2025"
+ 1115  git push origin master 
+ 1116  mkdir 3.00
+ 1117  git commit -m "3.13 27.09.2025"
+ 1118  git add .
+ 1119  mkdir 3.000
+ 1120  git commit -m "3.13 27.09.2025"
+ 1121  git log --oneline -n 5
+ 1122  git commit --amend -m "3.13 27.09.2025"
+ 1123  git log --oneline -n 5
+ 1124  mkdir 3.00
+ 1125  git commit -m "3.00 27.09.2025"
+ 1126  cd 3.00
+ 1127  code 3
+ 1128  св юю
+ 1129  cd ..
+ 1130  git add .
+ 1131  git commit -m "3.00 27.09.2025"
+ 1132  git push origin master
+ 1133  git remote -v
+ 1134  git remote -v https://github.com/yauheni-devops/DockerINNOWISE~
+ 1135  git remote set-url origin https://github.com/yauheni-devops/DockerINNOWISE.git
+ 1136  git remote -v
+ 1137  git push origin master
+ 1138  git status
+ 1139  git checkout -b new1
+ 1140  git push -u origin <имя-новой-ветки>
+ 1141  git push -u origin new1 
+ 1142  mkdir trash
+ 1143  git add .
+ 1144  git commit 
+ 1145  git push 
+ 1146  git clone https://github.com/Dmitry-dms/gocalc.git ~/gocalc
+ 1147  git -c credential.helper= clone https://github.com/Dmitry-dms/gocalc.git ~/gocalc
+ 1148  cd DockerINNOWISE/
+ 1149  ls -la
+ 1150  git add
+ 1151  git add .
+ 1152  git commit -m "27.09.2025"
+ 1153  git push
+ 1154  mkdir 3.16
+ 1155  cd 3.16
+ 1156  git clone https://github.com/docker/awesome-compose.git
+ 1157  ls -la
+ 1158  cd awesome-compose/
+ 1159  ls -la
+ 1160  docker build -t django:latest awesome-compose/django/app
+ 1161  cd ..
+ 1162  docker build -t django:latest awesome-compose/django/app
+ 1163  sudo nano /etc/docker/daemon.json
+ 1164  sudo systemctl restart docker
+ 1165  ls -la
+ 1166  cd awesome-compose/
+ 1167  ls -la
+ 1168  code README.md 
+ 1169  cd django/
+ 1170  ls -la
+ 1171  cd app/
+ 1172  ls -la
+ 1173  code Dockerfile 
+ 1174  cd ..
+ 1175  cd..
+ 1176  cd ..
+ 1177  docker build -t django:latest awesome-compose/django/app
+ 1178  sudo systemctl status docker
+ 1179  sudo systemctl start docker
+ 1180  sudo journalctl -xeu docker.service
+ 1181  [200~{
+ 1182  sudo code /etc/docker/daemon.json
+ 1183  code /etc/docker/daemon.json
+ 1184  sudo systemctl daemon-reload
+ 1185  sudo systemctl start docker
+ 1186  sudo systemctl status docker
+ 1187  [200~docker build -t django:latest awesome-compose/django/app~
+ 1188  docker build -t django:latest awesome-compose/django/app
+ 1189  sudo systemctl restart docker
+ 1190  sudo docker build -t django:latest awesome-compose/django/app
+ 1191  docker build -t vuejs:latest awesome-compose/vuejs/vuejs
+ 1192  cd vuejs/vuejs/Dockerfile
+ 1193  ls -la
+ 1194  cd awesome-compose/
+ 1195  ls -la
+ 1196  cd vuejs/vuejs/Dockerfile
+ 1197  code vuejs/vuejs/Dockerfile
+ 1198  sudo docker build -t vuejs:latest vuejs/vuejs
+ 1199  code vuejs/vuejs/Dockerfile
+ 1200  cd ..
+ 1201  sudo docker build -t vuejs:latest vuejs/vuejs
+ 1202  cd awesome-compose/
+ 1203  sudo docker build -t vuejs:latest vuejs/vuejs
+ 1204  code vuejs/vuejs/Dockerfile
+ 1205  sudo docker build -t vuejs:latest vuejs/vuejs
+ 1206  docker build -t react:frontend awesome-compose/react-java-mysql/frontend
+ 1207  cd ..
+ 1208  docker build -t react:frontend awesome-compose/react-java-mysql/frontend
+ 1209  docker run -d -p 8080:80 --name my-vue-app vuejs:latest
+ 1210  docker ps
+ 1211  docker run -d -p 8080:8000 --name my-vue-app java:backend
+ 1212  git push
+ 1213  cd awesome-compose/
+ 1214  cd react-java-mysql
+ 1215  docker compose up -d
+ 1216  [200~docker build -t java:backend awesome-compose/react-java-mysql/backend~
+ 1217  docker build -t java:backend awesome-compose/react-java-mysql/backend
+ 1218  cd ..
+ 1219  docker build -t java:backend awesome-compose/react-java-mysql/backend
+ 1220  cd ..
+ 1221  docker build -t java:backend awesome-compose/react-java-mysql/backend
+ 1222  cd DockerINNOWISE/
+ 1223  cd 3.16
+ 1224  cd awesome-compose/
+ 1225  cd ..
+ 1226  docker build -t java:backend awesome-compose/react-java-mysql/backend
+ 1227  docker build -t react:frontend awesome-compose/react-java-mysql/frontend
+ 1228  docker build -t django:latest awesome-compose/django/app
+ 1229  docker ps
+ 1230  docker run -d -p 8000:8000 --name my-django-app django:latest
+ 1231  docker ps
+ 1232  docker run -d -p 8080:80 --name my-vue-app vuejs:latest
+ 1233  cd react-java-mysql
+ 1234  cd awesome-compose/
+ 1235  cd react-java-mysql
+ 1236  docker compose up -d
+ 1237  docker ps
+ 1238  docker run -d -p 8080:80 --name my-vue-app vuejs:latest
+ 1239  docker compose up -d
+ 1240  docker ps
+ 1241  docker run -d -p 8080:80 --name my-vue-app vuejs:latest
+ 1242  docker run -d -p 8080:70 --name my-vue-app vuejs:latest
+ 1243  docker run -d -p 8080:80 --name my-vue-appp vuejs:latest
+ 1244  docker ps
+ 1245  pwd
+ 1246  cd DockerINNOWISE/
+ 1247  cd ~/DockerINNOWISE/3.17/gocalc-app/
+ 1248  docker images
+ 1249  docker tag gocalc-app:1.0 localhost:5000/gocalc-app:1.0
+ 1250  docker images
+ 1251  docker push localhost:5000/gocalc-app:1.0
+ 1252  curl http://localhost:5000/v2/_catalog
+ 1253  cd ../..
+ 1254  mkdir 3.18 || grep cd 3.18
+ 1255  mkdir 3.18 &&| cd 3.18
+ 1256  mkdir 3.18 || cd 3.18
+ 1257  git clone https://github.com/allan-dol/counter.git
+ 1258  cd coun
+ 1259  mkdir counter
+ 1260  git clone https://github.com/allan-dol/counter.git
+ 1261  cd counter/
+ 1262  cd ..
+ 1263  mv counter counter-app
+ 1264  cd counter-app/
+ 1265  touch main.py && code main.py
+ 1266  cd ..
+ 1267  cd ~/DockerINNOWISE/3.17
+ 1268  ls -la
+ 1269  cd gocalc-app/
+ 1270  ls -la
+ 1271  mv Dockerfile ~/DockerINNOWISE/3.18/counter-app
+ 1272  cd ~/DockerINNOWISE/3.18/counter-app 
+ 1273  ls -la
+ 1274  touch Pipfile && code Pipfile
+ 1275  code Dockerfile 
+ 1276  time docker build -t normal .
+ 1277  pip install pipenv
+ 1278  sudo pip install pipenv
+ 1279  sudo apt install python3-pip
+ 1280  pipenv lock
+ 1281  udo apt install pipenv
+ 1282  sudo apt install pipenv
+ 1283  pipenv lock
+ 1284  code Dockerfile 
+ 1285  time docker build -t normal .
+ 1286  code Dockerfile 
+ 1287  time docker build -t normal .
+ 1288  python3 --version
+ 1289  code Dockerfile 
+ 1290  time docker build -t normal .
+ 1291  cd DockerINNOWISE/
+ 1292  cd 3.18
+ 1293  ls -la
+ 1294  cd counter-app/
+ 1295  time docker build -t normal .
+ 1296  code Dockerfile 
+ 1297  time docker build -t normal .
+ 1298  docker pull hello-world
+ 1299  ping pypi.org
+ 1300  docker pull hello-world
+ 1301  sudo wg show
+ 1302  sudo wg-quick down wg0
+ 1303  cd counter-app/
+ 1304  cd Doc
+ 1305  cd DockerINNOWISE/
+ 1306  cd 3.18
+ 1307  ls -la
+ 1308  cd counter-app/
+ 1309  ls -la
+ 1310  time docker build -t normal .
+ 1311  sudo wg-quick up wg0
+ 1312  code Dockerfile 
+ 1313  sudo wg-quick down wg0
+ 1314  time docker build -t normal .
+ 1315  sudo wg-quick up wg0
+ 1316  code Dockerfile 
+ 1317  sudo wg-quick down wg0
+ 1318  time docker build -t normal .
+ 1319  sudo wg-quick up wg0
+ 1320  ды -д
+ 1321  ls -l
+ 1322  touch Pipfile.lock && code Pipfile.lock
+ 1323  code Dockerfile 
+ 1324  sudo wg-quick down wg0
+ 1325  time docker build -t normal .
+ 1326  sudo wg-quick up wg0
+ 1327  code Pipfile
+ 1328  sudo wg-quick down wg0
+ 1329  time docker build -t normal .
+ 1330  sudo wg-quick up wg0
+ 1331  time docker build -t normal .
+ 1332  echo "--- Содержимое Pipfile ---" && cat Pipfile && echo "--- Конец Pipfile ---"
+ 1333  code Pipfile
+ 1334  time docker build -t normal .
+ 1335  sudo wg-quick down wg0
+ 1336  time docker build -t normal .
+ 1337  sudo wg-quick up wg0
+ 1338  # Шаг 1: Удаляем старый файл, чтобы избежать проблем
+ 1339  rm -f Pipfile
+ 1340  # Шаг 2: Создаём новый, 100% правильный Pipfile
+ 1341  cat > Pipfile << EOF
+ 1342  [[source]]
+ 1343  url = "https://pypi.org/simple"
+ 1344  verify_ssl = true
+ 1345  name = "pypi"
+ 1346  [packages]
+ 1347  flask = "*"
+ 1348  [dev-packages]
+ 1349  [requires]
+ 1350  python_version = "3.7"
+ 1351  EOF
+ 1352  # Шаг 3: Сразу же запускаем сборку с новым файлом
+ 1353  echo "Файл Pipfile пересоздан. Запускаю сборку..."
+ 1354  time docker build -t normal .
+ 1355  sudo wg-quick down wg0
+ 1356  # Шаг 1: Удаляем старый файл, чтобы избежать проблем
+ 1357  rm -f Pipfile
+ 1358  # Шаг 2: Создаём новый, 100% правильный Pipfile
+ 1359  cat > Pipfile << EOF
+ 1360  [[source]]
+ 1361  url = "https://pypi.org/simple"
+ 1362  verify_ssl = true
+ 1363  name = "pypi"
+ 1364  [packages]
+ 1365  flask = "*"
+ 1366  [dev-packages]
+ 1367  [requires]
+ 1368  python_version = "3.7"
+ 1369  EOF
+ 1370  # Шаг 3: Сразу же запускаем сборку с новым файлом
+ 1371  echo "Файл Pipfile пересоздан. Запускаю сборку..."
+ 1372  time docker build -t normal .
+ 1373  rm Pipfile Pipfile.lock
+ 1374  echo "flask" requirements.txt
+ 1375  ls -la
+ 1376  cat > requirements.txt << EOF flask EOF
+ 1377  flask
+ 1378  ls -la
+ 1379  touch requirements.txt && code requirements.txt
+ 1380  ls -la
+ 1381  code Dockerfile 
+ 1382  sudo wg-quick down wg0
+ 1383  time docker build -t normal .
+ 1384  sudo wg-quick up wg0
+ 1385  code main.py 
+ 1386  time docker build -t normal .
+ 1387  cp Dockerfile Dockerfile.mini
+ 1388  code Dockerfile.mini 
+ 1389  time docker build --squash -t squash -f Dockerfile.mini .
+ 1390  sudo nano /etc/docker/daemon.json
+ 1391  sudo systemctl restart docker
+ 1392  docker info | grep Experimental
+ 1393  time docker build --squash -t squash -f Dockerfile.mini .
+ 1394  sudo wg-quick down wg0
+ 1395  time docker build --squash -t squash -f Dockerfile.mini .
+ 1396  sudo wg-quick up wg0
+ 1397  code main.py 
+ 1398  sudo wg-quick down wg0
+ 1399  time docker build --squash -t squash -f Dockerfile.mini .
+ 1400  docker images | grep -E "normal|squash"
+ 1401  sudo wg-quick down wg0
+ 1402  sudo wg-quick up wg0
+ 1403  cd ~/.bash_history
+ 1404  code ~/.bash_history
+ 1405  history
+ 1406  history > my_commands.txt
+ 1407  ls -la
+ 1408  lspci -k | grep -A 3 -E "(VGA|3D)"
+ 1409  sudo apt update && sudo apt full-upgrade
+ 1410  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/keyrings/packages.microsoft.gpg > /dev/null
+ 1411  echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+ 1412  sudo apt update && sudo apt full-upgrade
+ 1413  cd ..
+ 1414  ls -la
+ 1415  cd counter-app/
+ 1416  ls -la
+ 1417  git init
+ 1418  git add .
+ 1419  git commit -m "for Vitaly"
+ 1420  gh repo create
+ 1421  sudo gh repo create
+ 1422  sudo apt install gh
+ 1423  gh auth login
+ 1424  gh repo create
+ 1425  git remote -v
+ 1426  git status
+ 1427  git push origin master
+ 1428  git clone https://github.com/Dmitry-dms/gocalc.git ~/gocalc
+ 1429  ls -la
+ 1430  cd DockerINNOWISE/
+ 1431  cd 3.14
+ 1432  ls
+ 1433  git clone https://devops-gitlab.inno.ws/devops-board/docker/-/tree/main/gocalc
+ 1434  ls -al ~/.ssh
+ 1435  git clone https://devops-gitlab.inno.ws/devops-board/docker.git
+ 1436  # Клонируем основной репозиторий 'docker'
+ 1437  git clone https://devops-gitlab.inno.ws/devops-board/docker.git ~/docker
+ 1438  # Переходим в нужную папку gocalc внутри репозитория
+ 1439  cd ~/docker/gocalc
+ 1440  # Создаем файл
+ 1441  touch Dockerfile
+ 1442  ls -la
+ 1443  code Dockerfile
+ 1444  cd DockerINNOWISE/
+ 1445  cd 3.14
+ 1446  ls -l
+ 1447  cd docker/
+ 1448  ls -ls
+ 1449  cd gocalc/
+ 1450  ls -ls
+ 1451  # 1. Собираем образ и присваиваем ему тег gocalc:v1
+ 1452  docker build -t gocalc:v1 .
+ 1453  # 2. Выводим список образов, чтобы убедиться, что он создался
+ 1454  echo "--- Список образов Docker ---"
+ 1455  docker images
+ 1456  # 3. Изучаем историю (слои) созданного образа
+ 1457  echo "--- История образа gocalc:v1 ---"
+ 1458  docker history gocalc:v1
+ 1459  pwd
+ 1460  docker build -t gocalc:v1 .
+ 1461  ls -la
+ 1462  cd ..
+ 1463  ls -la
+ 1464  cd ..
+ 1465  ls -la
+ 1466  cd docker/
+ 1467  cd gocalc/
+ 1468  ls -la
+ 1469  touch Dockerfile
+ 1470  code Dockerfile 
+ 1471  ls -la
+ 1472  docker build -t gocalc:v1 .
+ 1473  code Dockerfile 
+ 1474  docker build -t gocalc:v1 .
+ 1475  cd ..
+ 1476  ls -la
+ 1477  cd trash/
+ 1478  ls -la
+ 1479  cd ..
+ 1480  ls -la
+ 1481  cd DockerINNOWISE/
+ 1482  ls -la
+ 1483  code file1.txt 
+ 1484  cd 3.13
+ 1485  ls -la
+ 1486  cd ..
+ 1487  cd 3.16
+ 1488  ls -la
+ 1489  cd awesome-compose/
+ 1490  ls -la
+ 1491  cd wireguard/
+ 1492  ls -la
+ 1493  code README.md 
+ 1494  ipconfig
+ 1495  ip link show
+ 1496  ip route show
+ 1497  wg show
+ 1498  sudo wg show
+ 1499  sudo wg up
+ 1500  sudo wg-quik up
+ 1501  sudo wg-quick up
+ 1502  sudo wg show
+ 1503  sudo wg-quick up wg0
+ 1504  sudo wg show
+ 1505  sudo systemct1 restart NetworkManager
+ 1506  sudo wg show
+ 1507  sudo ls /etc/wireguard/
+ 1508  sudo wg-quick up wg0
+ 1509  curl ifconfig.me
+ 1510  ip link show
+ 1511  nmcli dev wifi list
+ 1512  nmcli radio  wifi on
+ 1513  nmcli dev wifi list
+ 1514  cd ../..
+ 1515  curl ifconfig.me
+ 1516  sudo wg show
+ 1517  cd DockerINNOWISE/
+ 1518  cd 3.14
+ 1519  ls
+ 1520  cd docker/
+ 1521  ls
+ 1522  cd gocalc/
+ 1523  ls
+ 1524  docker build -t gocalc:v1 .
+ 1525  sudo wg-quick down [название_интерфейса]
+ 1526  sudo wg-quick down wg0
+ 1527  sudo wg-quick up wg0
+ 1528  sudo wg-quick down wg0
+ 1529  docker build -t gocalc:v1 .
+ 1530  sudo wg-quick up wg0
+ 1531  docker build -t gocalc:v1 .
+ 1532  ls -la
+ 1533  code Dockerfile 
+ 1534  docker build -t gocalc:v1 .
+ 1535  go mod tidy
+ 1536  sudo go mod tidy
+ 1537  docker run --rm -it   -v ~/docker/gocalc:/app   -w /app   golang:1.19.1   go mod tidy
+ 1538  docker run --rm -it   -v ~/docker/gocalc:/app   -w /app   golang:1.19.1   go mod init gocalc
+ 1539  docker run --rm -it   -v ~/docker/gocalc:/app   -w /app   golang:1.19.1   go mod tidy
+ 1540  code Dockerfile 
+ 1541  docker build -t gocalc:v1 .
+ 1542  mv ~/docker/go.mod ~/docker/go.sum ~/docker/gocalc/
+ 1543  ls -la
+ 1544  cd ..
+ 1545  ls -la
+ 1546  cd gocalc/
+ 1547  docker run --rm -v ~/docker/gocalc:/app -w /app golang:1.19.1 go mod init gocalc
+ 1548  cd ~/docker/gocalc
+ 1549  pwd
+ 1550  ls -la
+ 1551  docker build -t gocalc:v1 .
+ 1552  code Dockerfile 
+ 1553  docker build -t gocalc:v1 .
+ 1554  localadmin@engineer:~/docker/gocalc$ docker build -t gocalc:v1 .
+ 1555  [+] Building 46.6s (13/14)                                                                                                                               docker:default
+ 1556  ------                                                                                                                                                                  
+ 1557  7.497 /go/pkg/mod/github.com/prometheus/common@v0.66.1/model/labelset_string.go:18:2: package slices is not in GOROOT (/usr/local/go/src/slices)
+ 1558  ------
+ 1559  Dockerfile:15
+ 1560  --------------------
+ 1561  ERROR: failed to build: failed to solve: process "/bin/sh -c go build -o app" did not complete successfully: exit code: 1
+ 1562  code Dockerfile 
+ 1563  docker build -t gocalc:v1 .
+ 1564  code Dockerfile 
+ 1565  docker build -t gocalc:v1 .
+ 1566  code Dockerfile 
+ 1567  docker build -t gocalc:v1 .
+ 1568  docker images
+ 1569  docker history gocalc:v1
+ 1570  code Dockerfile 
+ 1571  docker build -t gocalc:v2 .
+ 1572  code Dockerfile 
+ 1573  docker build --build-arg MY_SECRET="very-secret-value-123" -t gocalc:v3 .
+ 1574  docker run --rm gocalc:v3 cat /app/secret.txt
+ 1575  # Переходим в домашнюю директорию, чтобы не клонировать внутрь другого репозитория
+ 1576  cd ~
+ 1577  # Клонируем Grafana, указав конкретную ветку
+ 1578  git clone --branch v6.3.x https://github.com/grafana/grafana.git ~/grafana
+ 1579  cd ~/grafana
+ 1580  touch Dockerfile
+ 1581  code Dockerfile 
+ 1582  docker build --target grafana-app -t grafana:app .
+ 1583  docker build --target grafana-static -t grafana:static .
+ 1584  docker images
+ 1585  docker ps
+ 1586  # Используя ID контейнера
+ 1587  docker stop a000330316d2
+ 1588  docker run -d -p 3000:3000 --name my-grafana grafana:app
+ 1589  docker ps
+ 1590  docker logs my-grafana
+ 1591  sudo lsof -i :3000
+ 1592  code Dockerfile 
+ 1593  # Убедитесь, что вы в папке ~/grafana
+ 1594  cd ~/grafana
+ 1595  # Запустите пересборку
+ 1596  docker build --no-cache --target grafana-app -t grafana:app .
+ 1597  docker rm my-grafana
+ 1598  docker run -d -p 3000:3000 --name my-grafana grafana:app
+ 1599  docker ps
+ 1600  docker logs my-grafana
+ 1601  rm -f Dockerfile
+ 1602  # 2. Создаем новый, 100% правильный Dockerfile с помощью одной команды
+ 1603  cat > Dockerfile << 'EOF'
+ 1604  # Этап 1: Сборщик
+ 1605  FROM alpine:3.10.3 AS builder
+ 1606  WORKDIR /src
+ 1607  RUN mkdir -p bin && \
+ 1608      echo "#!/bin/sh\necho 'Grafana server running...'" > bin/grafana-server && \
+ 1609      chmod +x bin/grafana-server
+ 1610  cat > Dockerfile 
+ 1611  ls -la
+ 1612  # 2. Создаем новый, 100% правильный Dockerfile с помощью одной команды
+ 1613  cat > Dockerfile << 'EOF'
+ 1614  # Этап 1: Сборщик
+ 1615  FROM alpine:3.10.3 AS builder
+ 1616  WORKDIR /src
+ 1617  RUN mkdir -p bin && \
+ 1618      echo "#!/bin/sh\necho 'Grafana server running...'" > bin/grafana-server && \
+ 1619      chmod +x bin/grafana-server
+ 1620  # Этап 2: Финальный образ
+ 1621  FROM alpine:3.10.3 AS grafana-app
+ 1622  WORKDIR /app
+ 1623  COPY --from=builder /src/bin/grafana-server .
+ 1624  ENTRYPOINT ["./grafana-server"]
+ 1625  EOF
+ 1626  code Dockerfile 
+ 1627  # 3. Убедимся, что файл создан правильно (просто для проверки)
+ 1628  echo "--- Содержимое нового Dockerfile: ---"
+ 1629  cat Dockerfile
+ 1630  echo "-----------------------------------"
+ 1631  # 4. Пересобираем образ с нуля
+ 1632  echo "--- Начинаем финальную сборку... ---"
+ 1633  docker build --no-cache --target grafana-app -t grafana:app .
+ 1634  docker rm -f my-grafana
+ 1635  # 6. Запускаем новый
+ 1636  echo "--- Запускаем новый контейнер... ---"
+ 1637  docker run -d -p 3000:3000 --name my-grafana grafana:app
+ 1638  # 7. Проверяем, что он запущен
+ 1639  echo "--- Проверяем статус контейнера (должен быть в списке): ---"
+ 1640  docker ps
+ 1641  docker run --rm -it --entrypoint /bin/sh grafana:app
+ 1642  cd grafana/
+ 1643  ls -la
+ 1644  cd ~/DockerINNOWISE/3.15
+ 1645  cd ~/DockerINNOWISE/3.13
+ 1646  cd ~/DockerINNOWISE/3.16
+ 1647  ls -la
+ 1648  cd ..
+ 1649  ls -la
+ 1650  git checkout main
+ 1651  git status
+ 1652  # Можно добавить конкретную папку
+ 1653  git add task-3.15/
+ 1654  # Или просто добавить ВСЕ новые/измененные файлы в проекте (чаще всего используют этот вариант)
+ 1655  git add .
+ 1656  git commit -m "feat: Add solution for task 04.10.2025"
+ 1657  git push -u origin task-3.15
+ 1658  git push -u origin 
+ 1659  git checkout main
+ 1660  git merge new1
+ 1661  git push origin main
+ 1662  git push origin master
+ 1663  git branch -d new1
+ 1664  git push origin master
+ 1665  ls -la
+ 1666  mkdir 3.15
+ 1667  ls -la
+ 1668  cd 3.17
+ 1669  git clone https://github.com/sudara/alonetone.git
+ 1670  git push -u origin --all
+ 1671  git push -u origin --tags
+ 1672  touch Dockerfile.dev
+ 1673  code Dockerfile.dev 
+ 1674  sudo systemctl enable snapd.apparmor.service
+ 1675  sudo systemctl start snapd.apparmor.service
+ 1676  code Dockerfile.dev 
+ 1677  exit
+ 1678  nano Dockerfile.dev
+ 1679  cd 3.15
+ 1680  code Dockerfile.dev
+ 1681  touch Dockerfile.prod
+ 1682  code Dockerfile.prod 
+ 1683  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1684  git remote rename origin github-origin
+ 1685  git add .
+ 1686  git push
+ 1687  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1688  bundle install
+ 1689  sudo snap install ruby 
+ 1690  em install bundler
+ 1691  gem install bundler
+ 1692  sudo apt  install ruby-rubygems
+ 1693  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1694  ls -la
+ 1695  bundle install
+ 1696  sudo apt install ruby-bundler
+ 1697  bundle install
+ 1698  code Dockerfile.dev 
+ 1699  ls -la
+ 1700  cd ..
+ 1701  ls -la
+ 1702  rm -rf 3.15
+ 1703  git clone https://github.com/sudara/alonetone.git
+ 1704  ls -la
+ 1705  cd alonetone/
+ 1706  nano Dockerfile.dev
+ 1707  ls -la
+ 1708  nano Dockerfile.prod
+ 1709  ls -la
+ 1710  bundle install
+ 1711  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1712  code Dockerfile.dev 
+ 1713  code Dockerfile.prod 
+ 1714  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1715  code Dockerfile.dev 
+ 1716  code Dockerfile.prod 
+ 1717  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1718  sudo systemctl restart docker
+ 1719  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1720  sudo wg-quick down wg0
+ 1721  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1722  sudo wg-quick up wg0
+ 1723  code Dockerfile.prod 
+ 1724  code Dockerfile.dev 
+ 1725  sudo wg-quick down wg0
+ 1726  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1727  sudo wg-quick up wg0
+ 1728  rm Gemfile.lock
+ 1729  bundle update
+ 1730  sudo wg-quick down wg0
+ 1731  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1732  sudo wg-quick up wg0
+ 1733  bundle install
+ 1734  bundle config set --local path 'vendor/bundle'
+ 1735  bundle install
+ 1736  sudo apt-get install ruby-dev
+ 1737  bundle install
+ 1738  sudo apt-get install libmysqlclient-dev
+ 1739  sudo wg-quick down wg0
+ 1740  bundle install
+ 1741  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1742  sudo wg-quick up wg0
+ 1743  docker build -f Dockerfile.dev -t alonetone:dev .
+ 1744  docker build -f Dockerfile.prod -t alonetone:prod .
+ 1745  sudo wg-quick down wg0
+ 1746  docker build -f Dockerfile.prod -t alonetone:prod .
+ 1747  cd ..
+ 1748  git status 
+ 1749  git add .
+ 1750  git status 
+ 1751  git push origin master
+ 1752  git commit -m "05.10.2022"
+ 1753  git push origin master
+ 1754  git push
+ 1755  docker build -f Dockerfile.prod -t alonetone:prod .
+ 1756  cd alonetone/
+ 1757  docker build -f Dockerfile.prod -t alonetone:prod .
+ 1758  docker images | grep alonetone
+ 1759  docker stop
+ 1760  docker ps
+ 1761  docker stop a000330316d2 
+ 1762  docker images:
+ 1763  docker images
+ 1764  cd ..
+ 1765  mkdir 3.19
+ 1766  cd 3.19
+ 1767  git clone https://github.com/fatfreecrm/fat_free_crm.git
+ 1768  git status
+ 1769  git add .
+ 1770  cd ..
+ 1771  git add .
+ 1772  git status
+ 1773  cd 3.14/docker
+ 1774  git add .
+ 1775  git commit -m "Обновление в docker"
+ 1776  cd ..
+ 1777  # Для второго подмодуля
+ 1778  cd 3.16/awesome-compose
+ 1779  git add .
+ 1780  git commit -m "Обновление в awesome-compose"
+ 1781  cd ../..
+ 1782  # Для третьего подмодуля
+ 1783  cd alonetone
+ 1784  git add .
+ 1785  git commit -m "Обновление в alonetone"
+ 1786  cd ..
+ 1787  ls -la
+ 1788  cd localadmin/
+ 1789  ls -la
+ 1790  cd DockerINNOWISE/
+ 1791  # Для второго подмодуля
+ 1792  cd 3.16/awesome-compose
+ 1793  git add .
+ 1794  git commit -m "Обновление в awesome-compose"
+ 1795  cd ../..
+ 1796  # Для третьего подмодуля
+ 1797  cd alonetone
+ 1798  git add .
+ 1799  git commit -m "Обновление в alonetone"
+ 1800  cd ..
+ 1801  git add .
+ 1802  git commit -m "Обновлены подмодули docker, awesome-compose, alonetone"
+ 1803  git status 
+ 1804  git push 
+ 1805  cd 3.19
+ 1806  ls -la
+ 1807  cd fat_free_crm
+ 1808  touch .dockerignore
+ 1809  ls -la
+ 1810  touch .dockerignore
+ 1811  ls -la
+ 1812  code .dockerignore 
+ 1813  git status 
+ 1814  git add .
+ 1815  git status 
+ 1816  git push 
+ 1817  git commit -m "Обновлен 3.19"
+ 1818  git push 
+ 1819  cd ../..
+ 1820  git commit -m "Обновлен 3.19"
+ 1821  git add .
+ 1822  git commit -m "Обновлен 3.19"
+ 1823  git push 
+ 1824  git status 
+ 1825  cd 3.15
+ 1826  ls -la
+ 1827  cd alonetone/
+ 1828  ls -la
+ 1829  code Dockerfile.prod 
+ 1830  cd ..
+ 1831  ls -la
+ 1832  mkdir 3.20
+ 1833  pwd
+ 1834  git status
+ 1835  cd 3.20
+ 1836  git clone https://github.com/apache/zookeeper.git
+ 1837  cd zookeeper
+ 1838  touch Dockerfile.alpine & touch Dockerfile.buster
+ 1839  ls -la
+ 1840  code Dockerfile.alpine
+ 1841  code Dockerfile.buster 
+ 1842  # Сборка образа на базе Alpine
+ 1843  docker build -f Dockerfile.alpine -t zookeeper-alpine:latest .
+ 1844  # Сборка образа на базе Buster
+ 1845  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1846  sudo wg-quick up wg0
+ 1847  sudo wg-quick down wg0
+ 1848  # Сборка образа на базе Alpine
+ 1849  docker build -f Dockerfile.alpine -t zookeeper-alpine:latest .
+ 1850  # Сборка образа на базе Buster
+ 1851  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1852  [A
+ 1853  sudo wg-quick up wg0
+ 1854  cd ..
+ 1855  git status 
+ 1856  git add .
+ 1857  git commit -m "Сообщение"
+ 1858  git commit --amend -m "3.20"
+ 1859  git push
+ 1860  docker build -f Dockerfile.alpine -t zookeeper-alpine:latest .
+ 1861  cd 3.20
+ 1862  cd zookeeper/
+ 1863  docker build -f Dockerfile.alpine -t zookeeper-alpine:latest .
+ 1864  cd ..
+ 1865  touch Снимок\ экрана\ от\ 2025-10-08\ 23-13-36.png
+ 1866  sudo wg-quick down wg0
+ 1867  docker build -f Dockerfile.alpine -t zookeeper-alpine:latest .
+ 1868  cd 3.20
+ 1869  ls -la
+ 1870  cd zookeeper/
+ 1871  ls -la
+ 1872  docker build -f Dockerfile.alpine -t zookeeper-alpine:latest .
+ 1873  sudo wg-quick up wg0
+ 1874  code Dockerfile.alpine 
+ 1875  code Dockerfile.buster 
+ 1876  sudo wg-quick down wg0
+ 1877  docker build -f Dockerfile.alpine -t zookeeper-alpine:latest .
+ 1878  sudo wg-quick up wg0
+ 1879  code Dockerfile.alpine.
+ 1880  code Dockerfile.alpine
+ 1881  sudo wg-quick down wg0
+ 1882  docker build -f Dockerfile.alpine -t zookeeper-alpine:latest .
+ 1883  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1884  sudo wg-quick up wg0
+ 1885  code Dockerfile.buster 
+ 1886  sudo wg-quick down wg0
+ 1887  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1888  sudo wg-quick up wg0
+ 1889  code Dockerfile.buster 
+ 1890  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1891  sudo wg-quick down wg0
+ 1892  docker build -f Dockerfile.buster -t zookeeper-buster:latest .
+ 1893  docker images zookeeper-*
+ 1894  docker images --help
+ 1895  sudo wg-quick up wg0
+ 1896  docker images | grep zookeeper
+ 1897  history 20 > last 40_commands.txt
+ 1898  history 20 > last_40_commands.txt
+ 1899  history 40 > last_40_commands.txt
+ 1900  history 90 > last_90_commands.txt
+ 1901  docker ps
+ 1902  # Пример использования имени и ID
+ 1903  docker stop a000330316d2
+ 1904  docker ps
+ 1905  git status 
+ 1906  git add .
+ 1907  git commit -m "3.20"
+ 1908  git push
+ 1909  git remote -v
+ 1910  git remote set-url origin https://github.com/yauheni-devops/zookeeper.git
+ 1911  git push
+ 1912  git push origin master
+ 1913  git status 
+ 1914  cd ..
+ 1915  git status 
+ 1916  git commit -m "3.20"
+ 1917  git add .
+ 1918  git commit -m "3.20"
+ 1919  git push
+ 1920  mkdir 3.21
+ 1921  cd 3.21
+ 1922  pwd
+ 1923  # Политика "no" (не перезапускать)
+ 1924  docker run -d --name inno-dkr-23-no --restart no nginx:stable-alpine
+ 1925  # Политика "on-failure" (перезапускать только при ошибке)
+ 1926  docker run -d --name inno-dkr-23-on-failure --restart on-failure nginx:stable-alpine
+ 1927  # Политика "unless-stopped" (перезапускать всегда, кроме случая, когда остановлен вручную)
+ 1928  docker run -d --name inno-dkr-23-unless-stopped --restart unless-stopped nginx:stable-alpine
+ 1929  # Политика "always" (перезапускать всегда)
+ 1930  docker run -d --name inno-dkr-23-always --restart always nginx:stable-alpine
+ 1931  docker kill -s 15 inno-dkr-23-no
+ 1932  docker kill -s 15 inno-dkr-23-on-failure
+ 1933  docker kill -s 15 inno-dkr-23-unless-stopped
+ 1934  docker kill -s 15 inno-dkr-23-always
+ 1935  docker ps -a | tee /home/user/kill_15.txt
+ 1936  ls -la
+ 1937  docker start inno-dkr-23-no
+ 1938  docker start inno-dkr-23-on-failure
+ 1939  docker ps -a
+ 1940  docker kill inno-dkr-23-no
+ 1941  docker kill inno-dkr-23-on-failure
+ 1942  docker kill inno-dkr-23-unless-stopped
+ 1943  docker kill inno-dkr-23-always
+ 1944  docker ps -a | tee /home/user/kill.txt
+ 1945  code /home/user/kill.txt
+ 1946  docker ps -a | tee /home/user/kill.txt
+ 1947  touch /home/user/kill.txt
+ 1948  touch home/user/kill.txt
+ 1949  cd /home
+ 1950  ls -la
+ 1951  docker ps -a | tee /home/localadmin/kill.txt
+ 1952  cd localadmin/
+ 1953  cd DockerINNOWISE/
+ 1954  cd 3.21
+ 1955  docker ps -a | tee /home/localadmin/kill.txt
+ 1956  docker ps -a 
+ 1957  watch docker ps -a
+ 1958  [200~docker logs inno-dkr-23-always~
+ 1959  docker logs inno-dkr-23-always
+ 1960  sudo journalctl -u docker.service --since "30 minutes ago"
+ 1961  docker --version
+ 1962  git status 
+ 1963  git add .
+ 1964  git status 
+ 1965  cd ..
+ 1966  git status 
+ 1967  git add .
+ 1968  cd 3.21
+ 1969  cd DockerINNOWISE/
+ 1970  cd 3.21
+ 1971  git status 
+ 1972  git add .
+ 1973  git commit -m "3.21"
+ 1974  git push
+ 1975  cd 3.22
+ 1976  mkdir 3.22
+ 1977  cd 3.22
+ 1978  docker run -d --name inno-dkr-24 --cap-drop=ALL --cap-add=NET_BIND_SERVICE --cap-add=SETGID --cap-add=SETUID --cap-add=CHOWN nginx:stable-alpine
+ 1979  docker ps
+ 1980  docker inspect inno-dkr-24
+ 1981  pwd
+ 1982  history > /home/localadmin/DockerINNOWISE/3.21/3.22_history.txt
