@@ -1,45 +1,53 @@
 version: '3.8'
 
 services:
-  gocalc:
-    build: . # Указываем Docker собрать образ из Dockerfile в текущей директории
-    restart: unless-stopped 
-    depends_on:
-      - postgres
-    networks:
-      - gocalc-nginx-net
-      - gocalc-postgres-net
-    environment:
-      - PORT_GOCALC=8080
-      - PG_USER_GOCALC=gocalc
-      - PG_PASSWORD_GOCALC=gocalc
-      - PG_DATABASE_GOCALC=gocalc
-      - PG_HOST_GOCALC=postgres
-      
   nginx:
-    image: nginx:1.21.3-alpine
+    image: nginx:alpine
     ports:
       - "80:80"
+    cap_drop:
+      - ALL
     depends_on:
       - gocalc
     networks:
-      - gocalc-nginx-net
-    cap_drop:
-      - ALL
-    cap_add:
-      - NET_BIND_SERVICE
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - frontend-net
+
+  gocalc:
+    # ИСПРАВЛЕНО: Собираем из Dockerfile в текущей папке
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    networks:
+      - frontend-net
+      - backend-net
+    # Убедитесь, что gocalc использует 'postgres' как имя хоста для БД
+    environment:
+      - DB_HOST=postgres
+      - DB_USER=user         # Замените на ваше
+      - DB_PASSWORD=password   # Замените на ваше
+      - DB_NAME=gocalc_db    # Замените на ваше
 
   postgres:
-    image: postgres:14.0-alpine
+    image: postgres:14-alpine
     networks:
-      - gocalc-postgres-net
+      - backend-net
     environment:
-      - POSTGRES_USER=gocalc
-      - POSTGRES_PASSWORD=gocalc
-      - POSTGRES_DB=gocalc
+      # Убедитесь, что эти значения СОВПАДАЮТ с теми, что у gocalc
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: gocalc_db
+    # Опционально: для сохранения данных postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
 
+# ЭТОТ БЛОК (networks) ДОЛЖЕН БЫТЬ НА ТОМ ЖЕ УРОВНЕ, ЧТО И 'services'
 networks:
-  gocalc-nginx-net:
-  gocalc-postgres-net:
+  frontend-net:
+    driver: bridge
+  backend-net:
+    driver: bridge
+
+# ЭТОТ БЛОК (volumes) ДОЛЖЕН БЫТЬ НА ТОМ ЖЕ УРОВНЕ, ЧТО И 'services'
+volumes:
+  postgres-data:

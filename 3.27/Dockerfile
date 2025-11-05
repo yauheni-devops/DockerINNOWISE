@@ -1,7 +1,7 @@
 # /home/localadmin/DockerINNOWISE/3.20/zookeeper/Dockerfile.alpine
 
 # 1. Базовый образ
-FROM openjdk:8-jdk-alpine
+FROM eclipse-temurin:8-jdk-alpine
 
 # 2. Устанавливаем переменные окружения для Maven
 ENV MAVEN_VERSION=3.9.6
