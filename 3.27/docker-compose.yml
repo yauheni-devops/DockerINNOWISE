@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  gocalc:
+    build: . # Указываем Docker собрать образ из Dockerfile в текущей директории
+    restart: unless-stopped 
+    depends_on:
+      - postgres
+    networks:
+      - gocalc-nginx-net
+      - gocalc-postgres-net
+    environment:
+      - PORT_GOCALC=8080
+      - PG_USER_GOCALC=gocalc
+      - PG_PASSWORD_GOCALC=gocalc
+      - PG_DATABASE_GOCALC=gocalc
+      - PG_HOST_GOCALC=postgres
+      
+  nginx:
+    image: nginx:1.21.3-alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - gocalc
+    networks:
+      - gocalc-nginx-net
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+
+  postgres:
+    image: postgres:14.0-alpine
+    networks:
+      - gocalc-postgres-net
+    environment:
+      - POSTGRES_USER=gocalc
+      - POSTGRES_PASSWORD=gocalc
+      - POSTGRES_DB=gocalc
+
+networks:
+  gocalc-nginx-net:
+  gocalc-postgres-net:
