@@ -1,23 +1,28 @@
-# /home/localadmin/DockerINNOWISE/3.20/zookeeper/Dockerfile.alpine
+# ---- ЭТАП 1: "Сборщик" (Builder) ----
+# ИСПРАВЛЕНО: Используем версию Go 1.23, как того требуют зависимости
+FROM golang:1.23-alpine AS builder
 
-# 1. Базовый образ
-FROM eclipse-temurin:8-jdk-alpine
-
-# 2. Устанавливаем переменные окружения для Maven
-ENV MAVEN_VERSION=3.9.6
-ENV MAVEN_HOME=/usr/share/maven
-ENV PATH=$MAVEN_HOME/bin:$PATH
-
-# 3. Устанавливаем curl, скачиваем и распаковываем Maven (с ИСПРАВЛЕННЫМ URL)
-RUN apk add --no-cache curl && \
-    mkdir -p $MAVEN_HOME && \
-    curl -fsSL "https://archive.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz" | tar -xzC /usr/share/maven --strip-components=1
-
-# 4. Устанавливаем рабочую директорию
 WORKDIR /app
 
-# 5. Копируем исходный код проекта в контейнер
+# 1. Копируем go.mod и go.sum ПЕРВЫМИ
+COPY go.mod go.sum ./
+
+# 2. Загружаем зависимости (это будет кэшироваться)
+RUN go mod download
+
+# 3. Копируем остальной исходный код (включая main.go)
 COPY . .
 
-# 6. Собираем приложение, пропуская тесты
-RUN mvn clean install -DskipTests
+# 4. Компилируем приложение
+RUN CGO_ENABLED=0 go build -o /gocalc main.go
+
+# ---- ЭТАП 2: "Финальный" (Runner) ----
+FROM alpine:latest
+
+WORKDIR /app
+
+# Копируем ТОЛЬКО скомпилированный файл из "builder"
+COPY --from=builder /gocalc .
+
+# Команда для запуска приложения
+CMD ["./gocalc"]

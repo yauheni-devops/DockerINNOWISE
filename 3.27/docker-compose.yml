@@ -5,49 +5,72 @@ services:
     image: nginx:alpine
     ports:
       - "80:80"
+    
+    # 2. Сокращаем capabilities до минимума, необходимого для старта
     cap_drop:
       - ALL
+    cap_add:
+      - NET_BIND_SERVICE  # Разрешить привязку к порту 80
+      - CHOWN             # Разрешить смену владельца (исправление ошибки)
+      - SETUID            # Разрешить смену пользователя
+      - SETGID            # Разрешить смену группы
+
+    # 3. Указываем зависимость от gocalc
     depends_on:
       - gocalc
+      
+    # 4. Подключаем к сети "frontend"
     networks:
       - frontend-net
 
   gocalc:
-    # ИСПРАВЛЕНО: Собираем из Dockerfile в текущей папке
+    # Собираем из Dockerfile в текущей папке
     build: .
+    
+    # 1. Устанавливаем политику перезапуска
     restart: unless-stopped
+    
+    # 3. Указываем зависимость от postgres
     depends_on:
       - postgres
+      
+    # 4. Подключаем к ДВУМ сетям (frontend и backend)
     networks:
       - frontend-net
       - backend-net
-    # Убедитесь, что gocalc использует 'postgres' как имя хоста для БД
+      
+    # Убедитесь, что gocalc использует эти переменные
+    # (Они должны совпадать с 'postgres' ниже)
     environment:
       - DB_HOST=postgres
-      - DB_USER=user         # Замените на ваше
-      - DB_PASSWORD=password   # Замените на ваше
-      - DB_NAME=gocalc_db    # Замените на ваше
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_NAME=gocalc_db
 
   postgres:
     image: postgres:14-alpine
+    
+    # 4. Подключаем к сети "backend"
     networks:
       - backend-net
+      
+    # Убедитесь, что эти переменные совпадают с 'gocalc'
     environment:
-      # Убедитесь, что эти значения СОВПАДАЮТ с теми, что у gocalc
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
       POSTGRES_DB: gocalc_db
-    # Опционально: для сохранения данных postgres
+      
+    # Сохраняем данные БД между перезапусками
     volumes:
       - postgres-data:/var/lib/postgresql/data
 
-# ЭТОТ БЛОК (networks) ДОЛЖЕН БЫТЬ НА ТОМ ЖЕ УРОВНЕ, ЧТО И 'services'
+# 4. Создаем 2 изолированные сети
 networks:
   frontend-net:
     driver: bridge
   backend-net:
     driver: bridge
 
-# ЭТОТ БЛОК (volumes) ДОЛЖЕН БЫТЬ НА ТОМ ЖЕ УРОВНЕ, ЧТО И 'services'
+# Том для сохранения данных postgres
 volumes:
   postgres-data:
