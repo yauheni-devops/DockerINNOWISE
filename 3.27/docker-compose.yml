@@ -1,0 +1,119 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+      - CHOWN
+      - SETUID
+      - SETGID
+    depends_on:
+      - gocalc
+      - fluentd 
+    networks:
+      - frontend-net
+      - efk-net 
+    logging: 
+      driver: "fluentd"
+      options:
+        fluentd-address: 127.0.0.1:24224 
+        tag: "nginx.service" 
+
+  gocalc:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - fluentd 
+    networks:
+      - frontend-net
+      - backend-net
+      - efk-net 
+    environment:
+      - DB_HOST=postgres
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_NAME=gocalc_db
+    logging: 
+      driver: "fluentd"
+      options:
+        fluentd-address: 127.0.0.1:24224 
+        tag: "gocalc.service" 
+
+  postgres:
+    image: postgres:14-alpine
+    networks:
+      - backend-net
+      - efk-net 
+    depends_on: 
+      - fluentd
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: gocalc_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    logging: 
+      driver: "fluentd"
+      options:
+        fluentd-address: 127.0.0.1:24224 
+        tag: "postgres.service" 
+
+  # --- НОВЫЙ СТЕК EFK ---
+
+  elasticsearch:
+    image: elasticsearch:7.17.10 
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m" 
+    volumes:
+      - esdata:/usr/share/elasticsearch/data 
+    ports:
+      - "9200:9200" 
+    networks:
+      - efk-net 
+
+  kibana:
+    image: kibana:7.17.10
+    container_name: kibana
+    ports:
+      - "5601:5601" 
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    networks:
+      - efk-net 
+
+  fluentd:
+    build: ./fluentd # <-- Это правильная строка (БЕЗ 'image:')
+    container_name: fluentd
+    ports:
+      - "24224:24224" 
+      - "24224:24224/udp" 
+    volumes:
+      - ./fluentd/conf:/fluentd/etc 
+    depends_on:
+      - elasticsearch
+    networks:
+      - efk-net 
+
+# --- ОБНОВЛЕННЫЕ СЕТИ И ТОМА ---
+
+networks:
+  frontend-net:
+    driver: bridge
+  backend-net:
+    driver: bridge
+  efk-net: 
+    driver: bridge
+
+volumes:
+  postgres-data:
+  esdata: {}
